@@ -1,0 +1,32 @@
+Ramonet Pascualet
+como puedo pedir que introduzca el nombre.py de varios archivos con bash y ver su contenido
+
+Para poder leer el contenido de varios archivos con extension ".py" usando bash, puedes usar el siguiente comando:
+
+for file in *.py; do
+  echo "Contenido del archivo $file:"
+  cat $file
+done
+
+Este comando recorre todos los archivos con extensión ".py" en el directorio actual y muestra su contenido en la consola. Si quieres especificar un directorio diferente, puedes reemplazar *.py con la ruta completa de los archivos que quieres leer, por ejemplo: /ruta/a/directorio/*.py.
+
+
+
+/////////////////////////////////////////////////
+/////////////////////////////////////////////////
+
+
+quiero poder introducir el nombre del archivo.py despues de for file in 
+
+Para poder introducir el nombre del archivo ".py" después de "for file in", puedes utilizar una variable para almacenar el nombre del archivo y usarla dentro del bucle "for". Por ejemplo:
+
+echo "Ingresa el nombre del archivo: "
+read nombre_archivo
+
+for file in $nombre_archivo; do
+  echo "Contenido del archivo $file:"
+  cat $file
+done
+
+Con este código, se pedirá al usuario que ingrese el nombre del archivo y luego se mostrará el contenido del archivo en la consola. Si el archivo no existe o no se encuentra en el directorio actual, se mostrará un mensaje de error.
+
